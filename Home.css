@@ -4,10 +4,12 @@ h1{
   font-weight: bold;
 }
 
+/* all form options*/
 form{
   text-align: center;
 }
 
+/*Input box for journal entries*/
 .journalinput{
   
   justify-content: center;
@@ -16,6 +18,7 @@ form{
   height: 500px;
 }
 
+/* start of css for the Navigation Bar*/
 ul {
   list-style-type: none;
   display: flex;
@@ -42,7 +45,10 @@ li a {
 li a:hover {
   background-color: #0099b8;
 }
+/*End of css for the navigation bar*/
 
+
+/*mood tracker buttons*/
 .MoodTracker{
   
   display: flex;
@@ -59,6 +65,7 @@ p{
   font-weight: bold;
 }
 
+/*image of emotion range for mood tracker*/
 .emotionrange{
   display: flex;
   justify-content: center;
@@ -67,6 +74,7 @@ p{
   width: 100%
 }
 
+/*button for both mood tracker options and saving journal inputs*/
 .button{
   display: flex;
   background-color: #00B89A;

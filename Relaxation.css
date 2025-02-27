@@ -1,3 +1,4 @@
+/*start of navigation bar css*/
 ul {
     list-style-type: none;
     display: flex;
@@ -25,3 +26,4 @@ ul {
   li a:hover {
     background-color: #0099b8;
   }
+  /*End of navigation bar css*/

@@ -1,5 +1,5 @@
 /*start of navigation bar css*/
-ul {
+.NavLinksul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -10,7 +10,7 @@ ul {
     font-family: sans-serif;
   }
   
-  li {
+  .NavLinksli {
     float: left;
   }
   

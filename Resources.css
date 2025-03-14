@@ -14,7 +14,7 @@
     float: left;
   }
   
-  li a {
+  .NavLinksa {
     display: block;
     color: white;
     text-align: center;
@@ -23,7 +23,47 @@
   }
   
   
-  li a:hover {
+  .NavLinksa:hover {
     background-color: #0099b8;
   }
   /*End of navigation bar css*/
+
+  /*main subheading of the page*/
+  h1{
+    background: aqua;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  .resourceimages{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+  }  
+
+  .ResourceLinksUL{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+
+  .resourceDescription{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+  }

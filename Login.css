@@ -1,0 +1,55 @@
+.pagealign{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+
+}
+
+.inputs{
+    text-align: center;
+
+}
+
+.button{
+    
+    text-align: center;
+}
+
+.Loginbutton{
+  display: flex;
+  background-color: #00B89A;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.topcorner{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.bottomcorner{
+    position: absolute;
+  bottom:0px;
+  left: 0px;
+}
+
+
+

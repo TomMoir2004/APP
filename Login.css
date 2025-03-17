@@ -1,3 +1,4 @@
+/*sets login features location to center of page*/
 .pagealign{
     margin: 0;
     position: absolute;
@@ -6,6 +7,7 @@
     transform: translate(-50%, -50%);
 }
 
+/*colour and location of title*/
 h1{
     text-align: center;
     color: #0025b8;
@@ -13,16 +15,19 @@ h1{
 
 }
 
+/*sets input boxes to center of page*/
 .inputs{
     text-align: center;
 
 }
 
+/*centers the button*/
 .button{
     
     text-align: center;
 }
 
+/*design of button*/
 .Loginbutton{
   display: flex;
   background-color: #00B89A;
@@ -38,6 +43,7 @@ h1{
   margin: 0;
 }
 
+/*sets corner circle to top right*/
 .topcorner{
     position: absolute;
     top: 0px;
@@ -45,6 +51,7 @@ h1{
 
 }
 
+/*sets corner circle to bottom left*/
 .bottomcorner{
     position: absolute;
   bottom:0px;

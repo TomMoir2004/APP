@@ -48,6 +48,8 @@ h1{
     position: absolute;
     top: 0px;
     right: 0px;
+    width: 25%;
+    height: 5%;
 
 }
 
@@ -56,6 +58,8 @@ h1{
     position: absolute;
   bottom:0px;
   left: 0px;
+  width: 5%;
+  height: 25%;
 }
 
 

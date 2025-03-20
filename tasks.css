@@ -34,7 +34,25 @@ li a:hover {
     text-align: center;
 }
 
+.capybuttons{
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    
+    
+}
+
 .dailytasks{
+   
     text-align: center;
     font-family: sans-serif;
+}
+
+.task{
+    background-color: #0099b8;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
 }

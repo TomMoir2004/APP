@@ -15,6 +15,12 @@ h1{
 
 }
 
+p{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+}
+
 /*sets input boxes to center of page*/
 .inputs{
     text-align: center;
@@ -58,12 +64,16 @@ h1{
     position: absolute;
   bottom:0px;
   left: 0px;
-  width: 5%;
-  height: 25%;
+  width: 5px;
+  height: 5px;
 }
 
 .capy{
     text-align: center;
+}
+
+.link{
+    font-family: sans-serif;
 }
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +27,11 @@
 
 <!--Buttons to submit an input for the mood tracker-->
 <div class="MoodTracker">
-<input type ="button" class="button" value="Very bad">
-<input type ="button" class="button" value="Bad">
-<input type ="button" class="button" value="Average">
-<input type ="button" class="button" value="Good">
-<input type ="button" class="button" value="Very good">
+<button onclick="feedback()" class="button">Very bad</button>
+<button onclick="feedback()" class="button">Bad</button>
+<button onclick="feedback()" class="button">Average</button>
+<button onclick="feedback()" class="button">Good</button>
+<button onclick="feedback()" class="button">Very good</button>
 </div>
 
 <!--Journal functionality-->
@@ -43,7 +43,7 @@
 <input type="text" class="journalinput">
 <br>
 <!--Submit button to save journal entry-->
-<input type ="button" class="button" value="Save journal entry">
+<button onclick="feedback()" class="button">Save journal entry</button>
 </form>
 
 <!--Daily affirmations-->
@@ -51,7 +51,22 @@
 <div class="quotes">
 <li class="quote">You're worth it!</p></li>
 <li class="quote">You Matter!</p></li>
-<li class="quote">You're a good preson!</p></li>
+<li class="quote">You're a good person!</p></li>
 </div>
+<!--JavaScript-->
+<script>
+    //alert that appears on opening page
+    alert("Hello! make sure to record your current mood with the mood tracker :)")
+
+    //function to provide feedback on button click 
+    function feedback() {
+        alert("Response recorded!");
+    }
+
+</script>
+
+    
+
+
 </body>
 </html>

@@ -27,15 +27,16 @@
 <div class="capy">
 <img id="myImage" src="capybara.jpg" alt="capybara">
 <br>
-<div class="capybuttons">
-<button onclick="document.getElementById('myImage').src='capybara.jpg'">No customisation!</button>
-<button onclick="document.getElementById('myImage').src='bluehatcapybara.jpg'">Blue Hat!</button>
-<button onclick="document.getElementById('myImage').src='redhatcapybara.jpg'">Red Hat!</button>
-<button onclick="document.getElementById('myImage').src='sunglassescapy.jpg'">Sunglasses!</button>
-<button onclick="document.getElementById('myImage').src='spacecapy.jpg'">Space!</button>
+<div class="capybuttonsdiv">
+
+<button onclick="standard()" class="capybuttons">No customisation!</button>
+<button onclick="bluehat()" class="capybuttons">Blue Hat!</button>
+<button onclick="redhat()" class="capybuttons">Red Hat!</button>
+<button onclick="sunglasses()" class="capybuttons">Sunglasses!</button>
+<button onclick="space()" class="capybuttons">Space!</button>
 </div>
 <!--end of customizable capybara-->
-
+<br>
 <!--Daily tasks for the user to complete-->
 <div class="dailytasks">
 <div class="task">
@@ -55,6 +56,30 @@
 </div>
 </div>
 </div>
+
+<script>
+
+    function standard() {
+        document.getElementById('myImage').src='capybara.jpg'
+    }
+
+    function bluehat() {
+        document.getElementById('myImage').src='bluehatcapybara.jpg'
+    }
+
+    function redhat() {
+        document.getElementById('myImage').src='redhatcapybara.jpg'
+    }
+
+    function sunglasses() {
+        document.getElementById('myImage').src='sunglassescapy.jpg'
+    }
+
+    function space() {
+        document.getElementById('myImage').src='spacecapy.jpg'
+    }
+
+</script>
 
 </body>
 </html>

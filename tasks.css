@@ -55,15 +55,15 @@ li a:hover {
 
 .dailytasks{
    
-    text-align: center;
+    
     font-family: sans-serif;
 }
 
 .task{
     background-color: #0099b8;
     color: white;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 38%;
+    margin-right: 38%;
 }
 
 .heading{
@@ -76,4 +76,9 @@ li a:hover {
   font-family: sans-serif;
   color: #0025b8;
   text-align: center;
+}
+
+.taskButton{
+  justify-content: right;
+  text-align: right;
 }

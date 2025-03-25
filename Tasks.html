@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="tasks.css">
 </head>
-<body>
+<body onload = "points()";>
 <!--Nav bar-->
     <ul class="NavBarul">
         <img src="nhslogo.png" alt="nhslogo" width="70px" height="50px" alt="NHSlogo">
@@ -29,6 +29,9 @@
 <br>
 <div class="capybuttonsdiv">
 
+
+<p>Points = </p>
+<p class="points" id="points"></p>
 <button onclick="standard()" class="capybuttons">No customisation!</button>
 <button onclick="bluehat()" class="capybuttons">Blue Hat!</button>
 <button onclick="redhat()" class="capybuttons">Red Hat!</button>
@@ -40,43 +43,64 @@
 <!--Daily tasks for the user to complete-->
 <div class="dailytasks">
 <div class="task">
-<P>1: Get out of bed!</P>
+<P>1: Get out of bed! <button onclick="taskComplete()" class="taskButton" >Task complete!</button></P>
 </div>
 <div class="task">
-<p>2: Wash your face!</p>
+<p>2: Wash your face! <button onclick="taskComplete()" class="taskButton" >Task complete!</button></p>
 </div>
 <div class="task">
-<p>3: Brush your teeth!</p>
+<p>3: Brush your teeth! <button onclick="taskComplete()" class="taskButton" >Task complete!</button></p>
 </div>
 <div class="task">
-<p>4: Eat some food!</p>
+<p>4: Eat some food! <button onclick="taskComplete()" class="taskButton" >Task complete!</button></p>
 </div>
 <div class="task">
-<p>5: Go for a walk!</p>
+<p>5: Go for a walk! <button onclick="taskComplete()" class="taskButton" >Task complete!</button></p>
 </div>
 </div>
 </div>
 
 <script>
+    
+    let points = 0;
+    document.getElementById('points').innerHTML=points;
+
+    function setPoints(){
+        document.getElementById('points').innerHTML=points;  
+    }
+
+    function taskComplete(){
+        points = points + 10;
+        setPoints();
+    }
+
 
     function standard() {
         document.getElementById('myImage').src='capybara.jpg'
     }
 
     function bluehat() {
+        if (points >= 10){
         document.getElementById('myImage').src='bluehatcapybara.jpg'
+        }
     }
 
     function redhat() {
+        if (points >= 20){
         document.getElementById('myImage').src='redhatcapybara.jpg'
+        }
     }
 
     function sunglasses() {
+        if (points >=30){
         document.getElementById('myImage').src='sunglassescapy.jpg'
+        }
     }
 
     function space() {
+        if (points >=40){
         document.getElementById('myImage').src='spacecapy.jpg'
+        }
     }
 
 </script>

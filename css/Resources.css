@@ -21,6 +21,10 @@
     padding: 14px 16px;
     text-decoration: none;
   }
+
+  body{
+    background-color: whitesmoke;
+  }
   
   
   .NavLinksa:hover {
@@ -38,7 +42,6 @@
 
   .mainPage{
     display: flex;
-    background-color: whitesmoke;
     flex-direction: column;
   }
 

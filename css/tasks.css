@@ -10,6 +10,9 @@
     background-color: #0025b8;
   }
   
+body{
+  background-color: whitesmoke;
+}
 
 li {
   float: left;

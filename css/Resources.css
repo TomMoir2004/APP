@@ -31,40 +31,31 @@
   /*main subheading of the page*/
   h1{
     background: aqua;
-    color: white;
+    color: #0025b8;
     font-family: sans-serif;
     border-radius: 10px;
   }
 
-  .resourceimages{
+  .mainPage{
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: sans-serif;
-    text-align: center;
-  }  
-
-  .ResourceLinksUL{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: sans-serif;
-    text-align: center;
+    background-color: whitesmoke;
+    flex-direction: column;
   }
 
-
-  .resourceDescription{
-    list-style-type: none;
+  .resourcesContainer{
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: sans-serif;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 5%;
+    border: 2px solid black;
     text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .resourcesContainer > div{
+   margin: 5%;
+    padding: 2%;
+    border: 4px solid black;
+    font-family: sans-serif;
   }

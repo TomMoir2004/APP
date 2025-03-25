@@ -17,12 +17,14 @@
     <li><a href="Tasks.html">Tasks</a></li>
     <li><a href="account.html"><img src="images/account.png" alt="account" width="50px" height="50px"></a></li>
 </ul>
+<br>
+<div class="mainPage">
 
-<!--Mood tracker functionalityr-->
+<!--Mood tracker functionality-->
 <h1>Mood Tracker</h1>
-
-<!--image to show range of emotions for mood tracker-->
+<div class="moodTrackerContainer">
 <div class="emotionrange">
+<!--image to show range of emotions for mood tracker-->
 <img src="images/emotionrange.jpg" alt="emotionrange">
 </div>
 
@@ -34,10 +36,12 @@
 <button onclick="feedback()" class="button">Good</button>
 <button onclick="feedback()" class="button">Very good</button>
 </div>
+</div>
 
 <!--Journal functionality-->
 <br>
 <h1 class="journaltitle">Journal</h1>
+<div class="journalContainer">
 <br>
 <form>
 <!--text box for user to input journal entry-->
@@ -46,15 +50,17 @@
 <!--Submit button to save journal entry-->
 <button onclick="feedback()" class="button">Save journal entry</button>
 </form>
-
-<!--Daily affirmations-->
-<h1 class="dailyaffirmations"> Daily affirmations</h1>
-<div class="quotes">
-<li class="quote">You're worth it!</p></li>
-<li class="quote">You Matter!</p></li>
-<li class="quote">You're a good person!</p></li>
 </div>
+<br>
+<h1 class="dailyaffirmations">Daily affirmations</h1>
+<!--Daily affirmations-->
+<div class="quotesContainer">
 
+<div><p>You're worth it!</p></div>
+<div><p>You matter!</p></div>
+<div><p>You're a good person!</p></div>
+</div>
+</div>
 <!--JavaScript file link-->
 <script type="text/javascript" src="javascript/home.js"></script>
 

@@ -1,14 +1,13 @@
 
-
 h1{
-  text-align: center;
+  text-align: left;
   font-family: sans-serif;
   font-weight: bold;
   color: #0025b8;
 }
 
 .journaltitle{
-  text-align: left;
+  text-align: right;
 }
 
 /* all form options*/
@@ -19,7 +18,6 @@ form{
 /*Input box for journal entries*/
 .journalinput{
 
-  justify-content: center;
   text-align: center;
   width: 100%;
   height: 500px;
@@ -96,21 +94,41 @@ li a:hover {
   color: #0025b8;
 }
 
-.quotes{
-  text-align: center;
-  
+.mainPage{
+  display: flex;
+  background-color: whitesmoke;
+  flex-direction: column;
 }
 
-.quote{
-  border: 4px solid black;
-  padding: 60px; 
-  margin: 10%; 
-  list-style-type: none;
-  display: flex;
-  overflow: hidden;
-  font-family: sans-serif;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
+.moodTrackerContainer{
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid black;
 }
+
+.journalContainer{
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.quotesContainer{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px;
+  padding: 5%;
+  border: 2px solid black;
+  text-align: center;
+  justify-content: center;
+}
+
+.quotesContainer > div{
+  margin-left: 10%;
+  padding: 5%;
+  border: 4px solid black;
+}
+
 

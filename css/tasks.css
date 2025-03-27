@@ -80,6 +80,7 @@ body{
     color: white;
     margin-left: 38%;
     margin-right: 38%;
+    border: solid 1px black;
 }
 
 .heading{
@@ -104,7 +105,7 @@ body{
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-  border: solid 2px black;
+  border: solid 1.5px black;
   border-radius: 2%;
 }
 

@@ -18,8 +18,9 @@
     function taskComplete1(){
         if (task1 == 0){
         points = points + 10;
+        document.getElementById('taskButton1').innerHTML= ('Complete!');
+        task1++;
         setPoints();
-        completed1();
         }
     }
 
@@ -27,8 +28,9 @@
     function taskComplete2(){
         if (task2 ==0){
         points = points + 10;
+        document.getElementById('taskButton2').innerHTML= ('Complete!');
+        task2++
         setPoints();
-        completed2();
         }
     }
 
@@ -36,8 +38,9 @@
     function taskComplete3(){
         if (task3 == 0){
         points = points + 10;
+        document.getElementById('taskButton3').innerHTML= ('Complete!');
+        task3++
         setPoints();
-        completed3();
         }
     }
 
@@ -45,8 +48,9 @@
     function taskComplete4(){
         if (task4 == 0){
         points = points + 10;
+        document.getElementById('taskButton4').innerHTML= ('Complete!');
+        task4++
         setPoints();
-        completed4();
         }
     }
 
@@ -54,63 +58,10 @@
     function taskComplete5(){
         if (task5 == 0){
         points = points + 10;
-        setPoints();
-        completed5();
-        }
-    }
-
-    //mark task 1 as complete and prevent it from being completed more than once
-    function completed1(){
-        document.getElementById('taskButton1').innerHTML= ('Complete!');
-        task1++;
-    }
-
-    //mark task 2 as complete and prevent it from being completed more than once
-    function completed2(){
-        document.getElementById('taskButton2').innerHTML= ('Complete!');
-        task2++
-    }
-
-    //mark task 3 as complete and prevent it from being completed more than once
-    function completed3(){
-        document.getElementById('taskButton3').innerHTML= ('Complete!');
-        task3++
-    }
-
-    //mark task 4 as complete and prevent it from being completed more than once
-    function completed4(){
-        document.getElementById('taskButton4').innerHTML= ('Complete!');
-        task4++
-    }
-
-    //mark task 5 as complete and prevent it from being completed more than once
-    function completed5(){
         document.getElementById('taskButton5').innerHTML= ('Complete!');
         task5++
-    }
-
-    //deduct points when purchasing the blue hat
-    function item1Purchased(){
-        points = points - item1;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deduct points when purchasing the red hat
-    function item2Purchased(){
-        points = points - item2;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deduct points when purchasing the sunglasses
-    function item3Purchased(){
-        points = points - item3;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deducts points when purchasing the space helmet
-    function item4Purchased(){
-        points = points - item4;
-        document.getElementById('points').innerHTML=points; 
+        setPoints();
+        }
     }
 
     //remove customisation
@@ -122,7 +73,8 @@
     function bluehat() {
         if (points >= 10){
             document.getElementById('myImage').src='images/bluehatcapybara.jpg';
-            item1Purchased();
+            points = points - item1;
+            document.getElementById('points').innerHTML=points; 
         }
     }
 
@@ -130,7 +82,8 @@
     function redhat() {
         if (points >= 20){
         document.getElementById('myImage').src='images/redhatcapybara.jpg';
-        item2Purchased();
+        points = points - item2;
+        document.getElementById('points').innerHTML=points; 
         }
     }
 
@@ -138,7 +91,8 @@
     function sunglasses() {
         if (points >=30){
         document.getElementById('myImage').src='images/sunglassescapy.jpg';
-        item3Purchased();
+        points = points - item3;
+        document.getElementById('points').innerHTML=points; 
         }
     }
 
@@ -146,6 +100,9 @@
     function space() {
         if (points >=40){
         document.getElementById('myImage').src='images/spacecapy.jpg';
-        item4Purchased();
+        points = points - item4;
+        document.getElementById('points').innerHTML=points; 
         }
     }
+
+   

@@ -69,7 +69,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  width: 100%
+  width: 100%;
 }
 
 /*button for both mood tracker options and saving journal inputs*/
@@ -123,12 +123,19 @@ li a:hover {
   border: 2px solid black;
   text-align: center;
   justify-content: center;
+  font-family: sans-serif;
+  color: #0025b8;
 }
 
 .quotesContainer > div{
   margin-left: 10%;
   padding: 5%;
   border: 4px solid black;
+  
+  
 }
+
+
+
 
 

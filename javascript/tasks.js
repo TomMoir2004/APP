@@ -115,7 +115,7 @@
 
     //remove customisation
     function standard() {
-        document.getElementById('myImage').src='capybara.jpg';
+        document.getElementById('myImage').src='images/capybara.jpg';
     }
 
     //purchase the blue hat and deduct the cost

@@ -9,6 +9,7 @@
     
     //sets the points to 0
     setPoints();
+
     
     //updates the number of points
     function setPoints(){
@@ -70,7 +71,7 @@
         document.getElementById('myImage').src='images/capybara.jpg';
     }
 
-    //purchase the blue hat and deduct the cost
+    //purchases the blue hat and deducts the cost from total points
     function bluehat() {
         if (points >= 10 && purchased1 ==0){
             points = points - item1;
@@ -85,7 +86,7 @@
         
     }
 
-    //purchase red hat and deduct the cost
+    //purchases the red hat and decucts the cost from total points
     function redhat() {
         if (points >= 20 && purchased2 == 0){
             points = points - item2;
@@ -98,7 +99,7 @@
         }
     }
 
-    //purchase sunglasses and deduct the cost
+    //purchases the sunglasses and deducts the cost from total points
     function sunglasses() {
         if (points >=30 && purchased3 == 0){
         points = points - item3;
@@ -111,7 +112,7 @@
         }
     }
 
-    //purchase space helmet and deduct the cost
+    //purchases the space helmet and deducts the cost from the total points
     function space() {
         if (points >=40 && purchased4 == 0){
         points = points - item4;

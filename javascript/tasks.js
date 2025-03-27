@@ -5,6 +5,7 @@
 
     //item numbers are: 1= blue hat, 2 = red hat, 3 = sunglasses, 4 = space
     let item1 = 10, item2 = 20, item3 = 30, item4 = 40;
+    let purchased1 = 0, purchased2 = 0, purchased3 = 0, purchased4 = 0;
     
     //sets the points to 0
     setPoints();
@@ -71,38 +72,57 @@
 
     //purchase the blue hat and deduct the cost
     function bluehat() {
-        if (points >= 10){
-            document.getElementById('myImage').src='images/bluehatcapybara.jpg';
+        if (points >= 10 && purchased1 ==0){
             points = points - item1;
-            document.getElementById('points').innerHTML=points; 
+            document.getElementById('points').innerHTML=points;
+            document.getElementById('myImage').src='images/bluehatcapybara.jpg';
+            purchased1 ++;
         }
+        else if(purchased1 ==1){
+            document.getElementById('myImage').src='images/bluehatcapybara.jpg';
+        }
+           
+        
     }
 
     //purchase red hat and deduct the cost
     function redhat() {
-        if (points >= 20){
-        document.getElementById('myImage').src='images/redhatcapybara.jpg';
-        points = points - item2;
-        document.getElementById('points').innerHTML=points; 
+        if (points >= 20 && purchased2 == 0){
+            points = points - item2;
+            document.getElementById('points').innerHTML=points; 
+            document.getElementById('myImage').src='images/redhatcapybara.jpg';
+            purchased2++
+        }
+        else if(purchased2 == 1){
+            document.getElementById('myImage').src='images/redhatcapybara.jpg';
         }
     }
 
     //purchase sunglasses and deduct the cost
     function sunglasses() {
-        if (points >=30){
-        document.getElementById('myImage').src='images/sunglassescapy.jpg';
+        if (points >=30 && purchased3 == 0){
         points = points - item3;
         document.getElementById('points').innerHTML=points; 
+        document.getElementById('myImage').src='images/sunglassescapy.jpg';
+        purchased3++
+        }
+        else if(purchased3 == 1){
+            document.getElementById('myImage').src='images/sunglassescapy.jpg';
         }
     }
 
     //purchase space helmet and deduct the cost
     function space() {
-        if (points >=40){
-        document.getElementById('myImage').src='images/spacecapy.jpg';
+        if (points >=40 && purchased4 == 0){
         points = points - item4;
         document.getElementById('points').innerHTML=points; 
+        document.getElementById('myImage').src='images/spacecapy.jpg';
+        purchased4++
         }
+        else if(purchased4 == 1){
+        document.getElementById('myImage').src='images/spacecapy.jpg'; 
+        }
+        
     }
 
    

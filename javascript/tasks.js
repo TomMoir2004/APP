@@ -1,5 +1,4 @@
-    //probably a shorter and easier way to do this but i dont know
-    //initialises different variables
+     //initialises different variables
     let points = 0;
     let task1 = 0, task2 = 0, task3 = 0, task4 = 0, task5 = 0;
 

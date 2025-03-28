@@ -78,8 +78,10 @@ body{
 .task{
     background-color: #0099b8;
     color: white;
-    margin-left: 38%;
-    margin-right: 38%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
     border: solid 1px black;
 }
 

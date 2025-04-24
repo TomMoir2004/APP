@@ -1,13 +1,14 @@
-    //probably a shorter and easier way to do this but i dont know
-    //initialises different variables
+     //initialises different variables
     let points = 0;
     let task1 = 0, task2 = 0, task3 = 0, task4 = 0, task5 = 0;
 
     //item numbers are: 1= blue hat, 2 = red hat, 3 = sunglasses, 4 = space
     let item1 = 10, item2 = 20, item3 = 30, item4 = 40;
+    let purchased1 = 0, purchased2 = 0, purchased3 = 0, purchased4 = 0;
     
     //sets the points to 0
     setPoints();
+
     
     //updates the number of points
     function setPoints(){
@@ -18,8 +19,9 @@
     function taskComplete1(){
         if (task1 == 0){
         points = points + 10;
+        document.getElementById('taskButton1').innerHTML= ('Complete!');
+        task1++;
         setPoints();
-        completed1();
         }
     }
 
@@ -27,8 +29,9 @@
     function taskComplete2(){
         if (task2 ==0){
         points = points + 10;
+        document.getElementById('taskButton2').innerHTML= ('Complete!');
+        task2++
         setPoints();
-        completed2();
         }
     }
 
@@ -36,8 +39,9 @@
     function taskComplete3(){
         if (task3 == 0){
         points = points + 10;
+        document.getElementById('taskButton3').innerHTML= ('Complete!');
+        task3++
         setPoints();
-        completed3();
         }
     }
 
@@ -45,8 +49,9 @@
     function taskComplete4(){
         if (task4 == 0){
         points = points + 10;
+        document.getElementById('taskButton4').innerHTML= ('Complete!');
+        task4++
         setPoints();
-        completed4();
         }
     }
 
@@ -54,98 +59,73 @@
     function taskComplete5(){
         if (task5 == 0){
         points = points + 10;
-        setPoints();
-        completed5();
-        }
-    }
-
-    //mark task 1 as complete and prevent it from being completed more than once
-    function completed1(){
-        document.getElementById('taskButton1').innerHTML= ('Complete!');
-        task1++;
-    }
-
-    //mark task 2 as complete and prevent it from being completed more than once
-    function completed2(){
-        document.getElementById('taskButton2').innerHTML= ('Complete!');
-        task2++
-    }
-
-    //mark task 3 as complete and prevent it from being completed more than once
-    function completed3(){
-        document.getElementById('taskButton3').innerHTML= ('Complete!');
-        task3++
-    }
-
-    //mark task 4 as complete and prevent it from being completed more than once
-    function completed4(){
-        document.getElementById('taskButton4').innerHTML= ('Complete!');
-        task4++
-    }
-
-    //mark task 5 as complete and prevent it from being completed more than once
-    function completed5(){
         document.getElementById('taskButton5').innerHTML= ('Complete!');
         task5++
-    }
-
-    //deduct points when purchasing the blue hat
-    function item1Purchased(){
-        points = points - item1;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deduct points when purchasing the red hat
-    function item2Purchased(){
-        points = points - item2;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deduct points when purchasing the sunglasses
-    function item3Purchased(){
-        points = points - item3;
-        document.getElementById('points').innerHTML=points; 
-    }
-
-    //deducts points when purchasing the space helmet
-    function item4Purchased(){
-        points = points - item4;
-        document.getElementById('points').innerHTML=points; 
+        setPoints();
+        }
     }
 
     //remove customisation
     function standard() {
-        document.getElementById('myImage').src='capybara.jpg';
+        document.getElementById('myImage').src='images/capybara.jpg';
     }
 
-    //purchase the blue hat and deduct the cost
+    //purchases the blue hat and deducts the cost from total points
     function bluehat() {
-        if (points >= 10){
+        if (points >= 10 && purchased1 ==0){
+            points = points - item1;
+            document.getElementById('points').innerHTML=points;
             document.getElementById('myImage').src='images/bluehatcapybara.jpg';
-            item1Purchased();
+            purchased1 ++;
         }
+        else if(purchased1 ==1){
+            document.getElementById('myImage').src='images/bluehatcapybara.jpg';
+        }
+           
+        
     }
 
-    //purchase red hat and deduct the cost
+    //purchases the red hat and decucts the cost from total points
     function redhat() {
-        if (points >= 20){
-        document.getElementById('myImage').src='images/redhatcapybara.jpg';
-        item2Purchased();
+        if (points >= 20 && purchased2 == 0){
+            points = points - item2;
+            document.getElementById('points').innerHTML=points; 
+            document.getElementById('myImage').src='images/redhatcapybara.jpg';
+            purchased2++
+        }
+        else if(purchased2 == 1){
+            document.getElementById('myImage').src='images/redhatcapybara.jpg';
         }
     }
 
-    //purchase sunglasses and deduct the cost
+    //purchases the sunglasses and deducts the cost from total points
     function sunglasses() {
-        if (points >=30){
+        if (points >=30 && purchased3 == 0){
+        points = points - item3;
+        document.getElementById('points').innerHTML=points; 
         document.getElementById('myImage').src='images/sunglassescapy.jpg';
-        item3Purchased();
+        purchased3++
+        }
+        else if(purchased3 == 1){
+            document.getElementById('myImage').src='images/sunglassescapy.jpg';
         }
     }
 
-    //purchase space helmet and deduct the cost
+    //purchases the space helmet and deducts the cost from the total points
     function space() {
-        if (points >=40){
+        if (points >=40 && purchased4 == 0){
+        points = points - item4;
+        document.getElementById('points').innerHTML=points; 
         document.getElementById('myImage').src='images/spacecapy.jpg';
-        item4Purchased();
+        purchased4++
         }
+        else if(purchased4 == 1){
+        document.getElementById('myImage').src='images/spacecapy.jpg'; 
+        }
+        
     }
+
+    
+
+
+   

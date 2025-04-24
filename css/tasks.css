@@ -31,6 +31,20 @@ li a:hover {
 }
 /*End of css for the navigation bar*/
 
+body{
+  background-color: whitesmoke;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px black;
+}
+
 .capy{
     align-items: center;
     justify-content: center;
@@ -54,6 +68,8 @@ li a:hover {
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    border: solid 2px black;
+    border-radius: 15%;
   }
 
 .dailytasks{
@@ -65,8 +81,11 @@ li a:hover {
 .task{
     background-color: #0099b8;
     color: white;
-    margin-left: 38%;
-    margin-right: 38%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    border: solid 1px black;
 }
 
 .heading{
@@ -83,5 +102,18 @@ li a:hover {
 
 .taskButton{
   justify-content: right;
-  text-align: right;
+  text-align: center;
+  display: inline;
+  background-color: #00B89A;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: solid 1.5px black;
+  border-radius: 2%;
+}
+
+p{
+  font-family: sans-serif;
 }

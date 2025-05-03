@@ -1,0 +1,119 @@
+/* start of css for the Navigation Bar*/
+.NavBarul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #e6f2ff;
+  }
+  
+body{
+  background-color: #e6f2ff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #0025b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #0099b8;
+}
+/*End of css for the navigation bar*/
+
+body{
+  background-color: whitesmoke;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f2ff;
+  border: solid 2px black;
+}
+
+.capy{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.capybuttonsdiv {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.capybuttons{
+    display: inline;
+    background-color: #00B89A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 15%;
+  }
+
+.dailytasks{
+   
+    
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.task{
+    background-color: #0099b8;
+    color: #e6f2ff;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    border: solid 1px black;
+}
+
+.heading{
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #0025b8;
+  text-align: center;
+}
+
+.subheading{
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #0025b8;
+  text-align: center;
+}
+
+.taskButton{
+  justify-content: right;
+  text-align: center;
+  display: inline;
+  background-color: #00B89A;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: solid 1.5px black;
+  border-radius: 2%;
+}
+
+p{
+  font-family: 'Comic Sans MS', sans-serif;
+}

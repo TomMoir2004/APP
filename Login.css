@@ -1,0 +1,89 @@
+body{
+    background-color: whitesmoke;
+}
+
+/*sets login features location to center of page*/
+.pagealign{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+}
+
+/*colour and location of title*/
+h1{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+
+}
+
+p{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+}
+
+/*sets input boxes to center of page*/
+.inputs{
+    text-align: center;
+
+}
+
+/*centers the button*/
+.button{
+    
+    text-align: center;
+}
+
+/*design of button*/
+.Loginbutton{
+  display: flex;
+  background-color: #00B89A;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/*sets corner circle to top right*/
+.topcorner{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25%;
+    height: 5%;
+
+}
+
+/*sets corner circle to bottom left*/
+.bottomcorner{
+    position: absolute;
+  bottom:0px;
+  left: 0px;
+  width: 5px;
+  height: 5px;
+}
+
+.capy{
+    text-align: center;
+}
+
+.link{
+    font-family: sans-serif;
+}
+
+
+
+

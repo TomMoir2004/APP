@@ -18,7 +18,7 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Comic Sans MS', sans-serif;
-  background-color: #e6f2ff;
+  background-color: #0025b8;
   border-bottom: 2px solid #005EB8;
 }
 
@@ -36,6 +36,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  color: white;
 }
 
 li a:hover {

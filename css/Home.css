@@ -1,16 +1,16 @@
 body{
-  background-color: whitesmoke;
+  background-color: white
 }
 
 h1{
   text-align: left;
-  font-family: sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
   font-weight: bold;
   color: #0025b8;
 }
 
 .journaltitle{
-  text-align: right;
+  text-align: left;
 }
 
 /* all form options*/
@@ -34,7 +34,7 @@ form{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
     background-color: #0025b8;
   }
   
@@ -45,10 +45,11 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: #005EB8;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  color: white;
 }
 
 li a:hover {
@@ -92,14 +93,14 @@ li a:hover {
 
 .dailyaffirmations{
   text-align: left;
-  font-family: sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
   font-weight: bold;
   color: #0025b8;
 }
 
 .mainPage{
   display: flex;
-  background-color: whitesmoke;
+  background-color: #e6f2ff;
   flex-direction: column;
 }
 
@@ -114,7 +115,8 @@ li a:hover {
   background-color: white;
   margin: 10px;
   padding: 20px;
-  border: 2px solid black;
+  border: 4px solid #8ebfef;
+  border-radius: 15px;
 }
 
 .quotesContainer{
@@ -123,7 +125,7 @@ li a:hover {
   background-color: white;
   margin: 10px;
   padding: 5%;
-  border: 2px solid black;
+  border: 2px solid #8ebfef;
   text-align: center;
   justify-content: center;
   font-family: sans-serif;
@@ -133,7 +135,8 @@ li a:hover {
 .quotesContainer > div{
   margin-left: 10%;
   padding: 5%;
-  border: 4px solid black;
+  border: 4px solid #8ebfef;
+  border-radius: 15px;
 }
 
 .Welcome{

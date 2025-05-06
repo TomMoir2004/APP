@@ -66,17 +66,21 @@
             })
                 .then((response) => {
                     if (response.ok) {
-                        alert('Login successful!');
-                        window.location.href = 'home.html';
+                        return response.json();
                     } else {
-                        return response.json().then((data) => {
-                            alert(data.error || 'Login failed.');
+                        return response.json().then(data => {
+                            throw new Error(data.error || 'Login failed.');
                         });
                     }
                 })
+                .then(data => {
+                    // Store user ID (in a real app, use proper session management)
+                    localStorage.setItem('userId', data.userId);
+                    window.location.href = 'home.html';
+                })
                 .catch((error) => {
                     console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
+                    alert(error.message || 'An error occurred. Please try again.');
                 });
         }
     </script>

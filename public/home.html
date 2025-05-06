@@ -36,11 +36,11 @@
 
             <!--Buttons to submit an input for the mood tracker-->
             <div class="MoodTracker">
-                <button onclick="feedback()" class="button">Very bad</button>
-                <button onclick="feedback()" class="button">Bad</button>
-                <button onclick="feedback()" class="button">Average</button>
-                <button onclick="feedback()" class="button">Good</button>
-                <button onclick="feedback()" class="button">Very good</button>
+                <button onclick="logMood(1)" class="button">Very bad</button>
+                <button onclick="logMood(2)" class="button">Bad</button>
+                <button onclick="logMood(3)" class="button">Average</button>
+                <button onclick="logMood(4)" class="button">Good</button>
+                <button onclick="logMood(5)" class="button">Very good</button>
             </div>
         </div>
 
@@ -49,12 +49,11 @@
         <h1 class="journaltitle">Journal</h1>
         <div class="journalContainer">
             <br>
-            <form>
-                <!--text box for user to input journal entry-->
-                <input type="text" class="journalinput">
+            <!-- Update the journal form -->
+            <form onsubmit="event.preventDefault(); saveJournalEntry();">
+                <input type="text" class="journalinput" required>
                 <br>
-                <!--Submit button to save journal entry-->
-                <button onclick="feedback()" class="button">Save journal entry</button>
+                <button type="submit" class="button">Save journal entry</button>
             </form>
         </div>
         <br>
@@ -74,7 +73,110 @@
     </div>
     <!--JavaScript file link-->
     <script type="text/javascript" src="javascript/home.js"></script>
+    <script>
+        // Get user ID from session (you might want to implement proper session handling)
+        let userId = null;
 
+        // Check if we have a logged in user (in a real app, use proper session management)
+        document.addEventListener('DOMContentLoaded', () => {
+            // For demo purposes, we'll just get the userId from localStorage
+            userId = localStorage.getItem('userId');
+            if (!userId) {
+                alert('Please login first');
+                window.location.href = 'login.html';
+            }
+
+            // Load a random quote
+            fetch('/api/quote')
+                .then(response => response.json())
+                .then(data => {
+                    // Update all quote elements with the random quote
+                    document.querySelectorAll('.quotesContainer div p').forEach(p => {
+                        p.textContent = data.quote;
+                    });
+                });
+        });
+
+        function logMood(moodValue) {
+            if (!userId) {
+                alert('Please login first');
+                return;
+            }
+
+            const notes = prompt('Add any notes about your mood (optional):');
+
+            fetch('/api/mood', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    moodValue: moodValue,
+                    notes: notes
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Mood logged successfully!');
+                    updatePoints();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to log mood');
+                });
+        }
+
+        function saveJournalEntry() {
+            if (!userId) {
+                alert('Please login first');
+                return;
+            }
+
+            const entry = document.querySelector('.journalinput').value;
+            if (!entry) {
+                alert('Please enter a journal entry');
+                return;
+            }
+
+            fetch('/api/journal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    entry: entry
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Journal entry saved!');
+                    document.querySelector('.journalinput').value = '';
+                    updatePoints();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to save journal entry');
+                });
+        }
+
+        function updatePoints() {
+            if (!userId) return;
+
+            fetch(`/api/points/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // You can display points somewhere on the page
+                    console.log('Current points:', data.points);
+                });
+        }
+
+        // Replace the feedback function
+        function feedback() {
+            // This is now handled by specific functions
+        }
+    </script>
 
 
 

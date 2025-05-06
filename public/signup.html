@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellmind - Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <!--div used to centre the elements of the page-->
+    <div class="pagealign">
+
+        <!--title-->
+        <h1>Wellmind NHS</h1>
+
+        <!--text boxes for user inputs-->
+        <div class="inputs">
+            <p>Username:</p>
+            <input type="text" id="username">
+            <p>First Name:</p>
+            <input type="text" id="user_first">
+            <p>Last Name:</p>
+            <input type="text" id="user_last">
+            <p>Email:</p>
+            <input type="text" id="user_email">
+            <p>Password:</p>
+            <input type="password" id="user_pass">
+            <br>
+        </div>
+
+        <!--button to sign up-->
+        <div class="button">
+            <br>
+            <button onclick="accountCreated()">Sign Up</button>
+        </div>
+        <br>
+
+        <!--link to login page-->
+        <div class="signup">
+            <a href="login.html" class="link">Already have an account? Click here to log in!</a>
+        </div>
+
+        <div class="capy">
+            <img src="images/logincapy.png" alt="capybara">
+        </div>
+    </div>
+
+    <!--image for top right quarter circle design thing-->
+    <div class="topcorner">
+        <img src="images/topright.png" alt="bluequartercircle">
+    </div>
+
+    <!--image for bottom left quarter circle design thing-->
+    <div class="bottomcorner">
+        <img src="images/bottomcorner.png" alt="bottomcornerquartercircle">
+    </div>
+
+    <script>
+        function accountCreated() {
+            const username = document.getElementById('username').value;
+            const user_first = document.getElementById('user_first').value;
+            const user_last = document.getElementById('user_last').value;
+            const user_email = document.getElementById('user_email').value;
+            const user_pass = document.getElementById('user_pass').value;
+
+            fetch('/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, user_first, user_last, user_email, user_pass }),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Account created successfully!');
+                        window.location.href = 'login.html';
+                    } else {
+                        return response.json().then((data) => {
+                            alert(data.error || 'Signup failed.');
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellmind - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!--div used to centre the elements of the page-->
+    <div class="pagealign">
+
+        <!--title-->
+        <h1>Wellmind NHS</h1>
+
+        <!--text boxes for user inputs-->
+        <div class="inputs">
+            <p>Username:</p>
+            <input type="text">
+            <p>Password:</p>
+            <input type="password">
+            <br>
+        </div>
+
+        <!--buton to login-->
+        <div class="button">
+            <br>
+            <button onclick="login()">Login</button>
+        </div>
+        <br>
+
+        <!--link to sign up page-->
+        <div class="signup">
+            <a href="signup.html" class="link">Dont have an account? click here to sign up!</a>
+        </div>
+
+        <div class="capy">
+            <img src="images/logincapy.png" alt="capybara">
+        </div>
+    </div>
+
+    <!--image for top right quater circle design thing-->
+    <div class="topcorner">
+        <img src="images/topright.png" alt="bluequartercircle">
+    </div>
+
+    <!--image for bottom left quater circle design thing-->
+    <div class="bottomcorner">
+        <img src="images/bottomcorner.png" alt="bottomcornerquartercircle">
+    </div>
+
+    <script>
+        function login() {
+            const username = document.querySelector('input[type="text"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        return response.json().then(data => {
+                            throw new Error(data.error || 'Login failed.');
+                        });
+                    }
+                })
+                .then(data => {
+                    // Store user ID (in a real app, use proper session management)
+                    localStorage.setItem('userId', data.userId);
+                    window.location.href = 'home.html';
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert(error.message || 'An error occurred. Please try again.');
+                });
+        }
+    </script>
+
+</body>
+
+</html>

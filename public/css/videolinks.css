@@ -1,0 +1,76 @@
+
+body{
+  background-color: #e6f2ff
+}
+/* Navigation Bar - Start*/
+.NavBarul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0025b8;
+  padding: 10px 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.NavBarul img {
+  margin-right: 10px;
+}
+
+.NavBarul li {
+  float: left;
+}
+
+.NavBarul li a {
+  display: block;
+  color: #0025b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.NavBarul li a:hover {
+  background-color: #007ca1;
+}
+/* End of Navbar*/
+
+  .title{
+    color: #0025b8;
+    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+  }
+
+  .ResourceLinksUL{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+  }
+
+  .optionsContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 5%;
+    border: 2px solid #8ebfef;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .optionsContainer > div{
+    margin: 5%;
+    padding: 2%;
+    border: 4px solid #8ebfef;
+    border-radius: 20%;
+    font-family: 'Comic Sans MS', sans-serif;
+
+  }
+
+  

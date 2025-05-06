@@ -1,0 +1,108 @@
+/* Navigation Bar - Start*/
+.NavBarul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0025b8;
+  padding: 10px 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.NavBarul img {
+  margin-right: 10px;
+}
+
+.NavBarul li {
+  float: left;
+}
+
+.NavBarul li a {
+  display: block;
+  color: #0025b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.NavBarul li a:hover {
+  background-color: #007ca1;
+}
+/* End of Navbar*/
+/* Page background */
+body {
+  background-color: white; /* Matches home.css */
+}
+
+/* Main subheading */
+h1 {
+  color: #0025b8;
+  font-family: 'Comic Sans MS', sans-serif;
+  border-bottom: 3px solid #0025b8;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Main page layout */
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6f2ff; /* Matches home.css */
+}
+
+/* Resources section */
+.resourcesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Adjust gap as needed */
+  padding: 40px;
+  background-color: white;
+  border: 2px solid #8ebfef;
+  margin: 20px auto;
+  max-width: 100%; /* Ensure it spans the full width */
+  border-radius: 20px;
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Individual resource cards */
+.resourcesContainer > div {
+  padding: 20px;
+  border: 4px solid #8ebfef; /* Matches quotesContainer inner div */
+  border-radius: 15px;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #0025b8;
+  background-color: #f2f9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s; /* Added transition for hover effect */
+}
+
+/* Hover effect for resource cards */
+.resourcesContainer > div:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #e0f3ff; /* Light background change on hover */
+}
+
+/* Resource box images */
+.resourcesContainer img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px; /* Added margin to space out the images */
+}
+
+/* Text style for links */
+.resourcesContainer a {
+  color: #005EB8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resourcesContainer a:hover {
+  text-decoration: underline;
+}

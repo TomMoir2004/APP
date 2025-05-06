@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Wellmind NHS - Home</title>
+</head>
+
+<body>
+
+
+    <!--Navigation bar links-->
+    <ul class="NavBarul">
+        <li><img src="images/nhslogo.png" alt="NHS Logo" width="70px" height="50px" /></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li>
+            <a href="account.html">
+                <img src="images/account.png" alt="Account" width="50px" height="50px" />
+            </a>
+        </li>
+    </ul>
+    <br>
+    <div class="mainPage">
+        <h1 class="Welcome">Welcome to Wellmind NHS</h1>
+        <!--Mood tracker functionality-->
+        <h1>Mood Tracker</h1>
+        <div class="moodTrackerContainer">
+            <div class="emotionrange">
+                <!--image to show range of emotions for mood tracker-->
+                <img src="images/capyemotions.png" alt="emotionrange">
+            </div>
+
+            <!--Buttons to submit an input for the mood tracker-->
+            <div class="MoodTracker">
+                <button onclick="logMood(1)" class="button">Very bad</button>
+                <button onclick="logMood(2)" class="button">Bad</button>
+                <button onclick="logMood(3)" class="button">Average</button>
+                <button onclick="logMood(4)" class="button">Good</button>
+                <button onclick="logMood(5)" class="button">Very good</button>
+            </div>
+        </div>
+
+        <!--Journal functionality-->
+        <br>
+        <h1 class="journaltitle">Journal</h1>
+        <div class="journalContainer">
+            <br>
+            <!-- Update the journal form -->
+            <form onsubmit="event.preventDefault(); saveJournalEntry();">
+                <input type="text" class="journalinput" required>
+                <br>
+                <button type="submit" class="button">Save journal entry</button>
+            </form>
+        </div>
+        <br>
+        <h1 class="dailyaffirmations">Daily affirmations</h1>
+        <!--Daily affirmations-->
+        <div class="quotesContainer">
+            <div>
+                <p>You're worth it!</p>
+            </div>
+            <div>
+                <p>You matter!</p>
+            </div>
+            <div>
+                <p>You're a good person!</p>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript file link-->
+    <script type="text/javascript" src="javascript/home.js"></script>
+    <script>
+        // Get user ID from session (you might want to implement proper session handling)
+        let userId = null;
+
+        // Check if we have a logged in user (in a real app, use proper session management)
+        document.addEventListener('DOMContentLoaded', () => {
+            // For demo purposes, we'll just get the userId from localStorage
+            userId = localStorage.getItem('userId');
+            if (!userId) {
+                alert('Please login first');
+                window.location.href = 'login.html';
+            }
+
+            // Load a random quote
+            fetch('/api/quote')
+                .then(response => response.json())
+                .then(data => {
+                    // Update all quote elements with the random quote
+                    document.querySelectorAll('.quotesContainer div p').forEach(p => {
+                        p.textContent = data.quote;
+                    });
+                });
+        });
+
+        function logMood(moodValue) {
+            if (!userId) {
+                alert('Please login first');
+                return;
+            }
+
+            const notes = prompt('Add any notes about your mood (optional):');
+
+            fetch('/api/mood', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    moodValue: moodValue,
+                    notes: notes
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Mood logged successfully!');
+                    updatePoints();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to log mood');
+                });
+        }
+
+        function saveJournalEntry() {
+            if (!userId) {
+                alert('Please login first');
+                return;
+            }
+
+            const entry = document.querySelector('.journalinput').value;
+            if (!entry) {
+                alert('Please enter a journal entry');
+                return;
+            }
+
+            fetch('/api/journal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    entry: entry
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Journal entry saved!');
+                    document.querySelector('.journalinput').value = '';
+                    updatePoints();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to save journal entry');
+                });
+        }
+
+        function updatePoints() {
+            if (!userId) return;
+
+            fetch(`/api/points/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // You can display points somewhere on the page
+                    console.log('Current points:', data.points);
+                });
+        }
+
+        // Replace the feedback function
+        function feedback() {
+            // This is now handled by specific functions
+        }
+    </script>
+
+
+
+</body>
+
+</html>

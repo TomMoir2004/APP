@@ -1,0 +1,93 @@
+body{
+    background-color: whitesmoke;
+}
+
+/*sets login features location to center of page*/
+.pagealign{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    width: 400px; /* Fixed width */
+    z-index: 1;
+}
+
+/*colour and location of title*/
+h1{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+
+}
+
+p{
+    text-align: center;
+    color: #0025b8;
+    font-family: sans-serif;
+}
+
+/*sets input boxes to center of page*/
+.inputs{
+    text-align: center;
+
+}
+
+/*centers the button*/
+.button{
+    
+    text-align: center;
+}
+
+/*design of button*/
+button{
+    justify-content: right;
+    text-align: center;
+    display: inline;
+    background-color: #00B89A;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid 1.5px black;
+    border-radius: 2%;
+}
+
+/* Locks the top-right image in place and ensures it resizes properly */
+.topcorner {
+    position: fixed; /* Locks the image in place */
+    top: 0;
+    right: 0;
+    width: -1%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1;
+    object-fit: contain; /* Ensures proper resizing */
+}
+
+/* Locks the bottom-left image in place and ensures it resizes properly */
+.bottomcorner {
+    position: fixed; /* Locks the image in place */
+    bottom: 0;
+    left: 0;
+    width: 1%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1;
+    object-fit: contain; /* Ensures proper resizing */
+}
+
+.capy{
+    text-align: center;
+}
+
+.link{
+    font-family: sans-serif;
+}
+
+
+
+

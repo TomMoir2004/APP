@@ -50,7 +50,7 @@ body{
     text-align: center;
   }
 
-  .optionsContainer{
+  .optionsContainer1{
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -61,7 +61,7 @@ body{
     justify-content: space-evenly;
   }
 
-  .optionsContainer > div{
+  .optionsContainer1 > div{
     margin: 5%;
     padding: 2%;
     border: 4px solid #8ebfef;
@@ -70,4 +70,63 @@ body{
 
   }
 
+  .optionsContainer2{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 5%;
+    border: 2px solid #8ebfef;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .optionsContainer2 > div{
+    margin: 5%;
+    padding: 2%;
+    border: 4px solid #8ebfef;
+    border-radius: 20%;
+    font-family: 'Comic Sans MS', sans-serif;
+
+  }
+
+  .optionsContainer3{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 5%;
+    border: 2px solid #8ebfef;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .optionsContainer3 > div{
+    margin: 5%;
+    padding: 2%;
+    border: 4px solid #8ebfef;
+    border-radius: 20%;
+    font-family: 'Comic Sans MS', sans-serif;
+
+  }
+
+  .optionsContainer4{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 5%;
+    border: 2px solid #8ebfef;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .optionsContainer4 > div{
+    margin: 5%;
+    padding: 2%;
+    border: 4px solid #8ebfef;
+    border-radius: 20%;
+    font-family: 'Comic Sans MS', sans-serif;
+
+  }
   

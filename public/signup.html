@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellmind - Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <!--div used to centre the elements of the page-->
+    <div class="pagealign">
+
+        <!--title-->
+        <h1>Wellmind NHS</h1>
+
+        <!--text boxes for user inputs-->
+        <div class="inputs">
+            <p>First Name</p>
+            <input type="text">
+            <p>Last Name</p>
+            <input type="text">
+            <p>Email</p>
+            <input type="text">
+            <p>Password</p>
+            <input type="text">
+            <br>
+        </div>
+
+        <!--button to sign up-->
+        <div class="button">
+            <br>
+            <button onclick="accountCreated()">Sign Up</button>
+        </div>
+        <br>
+
+        <!--link to login page-->
+        <div class="signup">
+            <a href="login.html" class="link">Already have an account? Click here to log in!</a>
+        </div>
+
+        <div class="capy">
+            <img src="images/logincapy.png" alt="capybara">
+        </div>
+    </div>
+
+    <!--image for top right quarter circle design thing-->
+    <div class="topcorner">
+        <img src="images/topright.png" alt="bluequartercircle">
+    </div>
+
+    <!--image for bottom left quarter circle design thing-->
+    <div class="bottomcorner">
+        <img src="images/bottomcorner.png" alt="bottomcornerquartercircle">
+    </div>
+
+    <script>
+        function accountCreated() {
+            alert('Account created!');
+        }
+    </script>
+
+</body>
+
+</html>

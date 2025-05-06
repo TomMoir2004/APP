@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="css/tasks.css">
+</head>
+
+<body onload="points()" ;>
+    <!--Nav bar-->
+    <ul class="NavBarul">
+        <li><img src="images/nhslogo.png" alt="NHS Logo" width="70px" height="50px" /></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li>
+            <a href="account.html">
+                <img src="images/account.png" alt="Account" width="50px" height="50px" />
+            </a>
+        </li>
+    </ul>
+    <br>
+    <!--Title and subheadings-->
+    <div class="container">
+        <div class="heading">
+            <h1>Daily Tasks</h1>
+        </div>
+        <div class="subheading">
+            <p>complete daily tasks to help improve your mood!</p>
+            <p>Earn points and customise the capybara!</p>
+        </div>
+
+        <!--start of customizable capybara-->
+        <div class="capy">
+            <img id="myImage" src="images/capybara.jpg" alt="capybara">
+            <br>
+            <div class="capybuttonsdiv">
+
+                <p>Points = </p>
+                <p class="points" id="points"></p>
+                <button onclick="standard()" class="capybuttons">No <br>customisation!</button>
+                <button onclick="bluehat()" class="capybuttons">Blue Hat!<br>(10 points)</button>
+                <button onclick="redhat()" class="capybuttons">Red Hat!<br>(20 points)</button>
+                <button onclick="sunglasses()" class="capybuttons">Sunglasses!<br>(30 points)</button>
+                <button onclick="space()" class="capybuttons">Space!<br>(40 points)</button>
+            </div>
+            <!--end of customizable capybara-->
+            <br>
+            <!--Daily tasks for the user to complete-->
+
+            <div class="task">
+                <P>1: Get out of bed! <button onclick="taskComplete1()" class="taskButton" id="taskButton1">Task
+                        complete?</button></P><br>
+            </div>
+            <div class="task">
+                <p>2: Wash your face! <button onclick="taskComplete2()" class="taskButton" id="taskButton2">Task
+                        complete?</button></p><br>
+            </div>
+            <div class="task">
+                <p>3: Brush your teeth! <button onclick="taskComplete3()" class="taskButton" id="taskButton3">Task
+                        complete?</button></p><br>
+            </div>
+            <div class="task">
+                <p>4: Eat some food! <button onclick="taskComplete4()" class="taskButton" id="taskButton4">Task
+                        complete?</button></p><br>
+            </div>
+            <div class="task">
+                <p>5: Go for a walk! <button onclick="taskComplete5()" class="taskButton" id="taskButton5">Task
+                        complete?</button></p><br>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascript/tasks.js"></script>
+
+
+    </script>
+
+</body>
+
+</html>

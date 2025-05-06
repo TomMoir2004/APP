@@ -1,0 +1,120 @@
+/* Navigation Bar - Start*/
+.NavBarul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0025b8;
+  padding: 10px 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.NavBarul img {
+  margin-right: 10px;
+}
+
+.NavBarul li {
+  float: left;
+}
+
+.NavBarul li a {
+  display: block;
+  color: #0025b8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.NavBarul li a:hover {
+  background-color: #007ca1;
+}
+/* End of Navbar*/
+
+body{
+  background-color: whitesmoke;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px black;
+}
+
+.capy{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.capybuttonsdiv {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.capybuttons{
+    display: inline;
+    background-color: #00B89A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 15%;
+  }
+
+.dailytasks{
+   
+    
+    font-family: sans-serif;
+}
+
+.task{
+    background-color: #0099b8;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    border: solid 1px black;
+}
+
+.heading{
+  font-family: sans-serif;
+  color: #0025b8;
+  text-align: center;
+}
+
+.subheading{
+  font-family: sans-serif;
+  color: #0025b8;
+  text-align: center;
+}
+
+.taskButton{
+  justify-content: right;
+  text-align: center;
+  display: inline;
+  background-color: #00B89A;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: solid 1.5px black;
+  border-radius: 2%;
+}
+
+p{
+  font-family: sans-serif;
+}

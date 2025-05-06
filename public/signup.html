@@ -18,14 +18,16 @@
 
         <!--text boxes for user inputs-->
         <div class="inputs">
+            <p>Username</p>
+            <input type="text" id="username">
             <p>First Name</p>
-            <input type="text">
+            <input type="text" id="user_first">
             <p>Last Name</p>
-            <input type="text">
+            <input type="text" id="user_last">
             <p>Email</p>
-            <input type="text">
+            <input type="text" id="user_email">
             <p>Password</p>
-            <input type="text">
+            <input type="password" id="user_pass">
             <br>
         </div>
 
@@ -58,7 +60,33 @@
 
     <script>
         function accountCreated() {
-            alert('Account created!');
+            const username = document.getElementById('username').value;
+            const user_first = document.getElementById('user_first').value;
+            const user_last = document.getElementById('user_last').value;
+            const user_email = document.getElementById('user_email').value;
+            const user_pass = document.getElementById('user_pass').value;
+
+            fetch('/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, user_first, user_last, user_email, user_pass }),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Account created successfully!');
+                        window.location.href = 'login.html';
+                    } else {
+                        return response.json().then((data) => {
+                            alert(data.error || 'Signup failed.');
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
         }
     </script>
 

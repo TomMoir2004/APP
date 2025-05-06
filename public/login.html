@@ -21,14 +21,14 @@
             <p>Username:</p>
             <input type="text">
             <p>Password:</p>
-            <input type="text">
+            <input type="password">
             <br>
         </div>
 
         <!--buton to login-->
         <div class="button">
             <br>
-            <button onclick="document.location='home.html'">Login</button>
+            <button onclick="login()">Login</button>
         </div>
         <br>
 
@@ -52,7 +52,34 @@
         <img src="images/bottomcorner.png" alt="bottomcornerquartercircle">
     </div>
 
+    <script>
+        function login() {
+            const username = document.querySelector('input[type="text"]').value;
+            const password = document.querySelector('input[type="password"]').value;
 
+            fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Login successful!');
+                        window.location.href = 'home.html';
+                    } else {
+                        return response.json().then((data) => {
+                            alert(data.error || 'Login failed.');
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+    </script>
 
 </body>
 
